@@ -1,0 +1,106 @@
+HASIL RUN PRAKTIKUM PYTHON DATETIME DAN TIME
+Waktu eksekusi UTC: 2026-10-14T06:57:32.492405+00:00
+Python: 3.14.5
+Sistem: Windows AMD64
+Perintah: python run_all.py
+Waktu dinamis mengikuti jam lingkungan eksekusi.
+
+================================================================
+01_datetime.py
+Exit code: 0
+Tanggal: 2026-10-14
+Tahun, bulan, hari: 2026 10 14
+Waktu: 13:30:45.123456
+Gabungan: 2026-10-14 13:30:45.123456
+Batas pengumpulan: 2026-10-21 15:30:45.123456
+Selisih: 7 days, 2:00:00
+Total detik: 612000.0
+Dengan zona: 2026-10-14 13:30:45.123456+07:00
+
+
+================================================================
+02_strftime.py
+Exit code: 0
+%Y -> 2026
+%m -> 10
+%d -> 14
+%d/%m/%Y -> 14/10/2026
+%H:%M:%S -> 13:30:45
+%I:%M:%S %p -> 01:30:45 PM
+%A, %d %B %Y -> Wednesday, 14 October 2026
+%z %Z -> +0700 WIB
+%c -> Wed Oct 14 13:30:45 2026
+Jenis hasil: str
+
+
+================================================================
+03_strptime.py
+Exit code: 0
+Input: 14/10/2026 13:30:45
+Hasil: 2026-10-14 13:30:45
+Tipe: datetime
+Hari/bulan: 2026-06-05
+Bulan/hari: 2026-05-06
+Input ditolak (ValueError): 31/02/2026
+Input ditolak (ValueError): 14-10-2026
+
+
+================================================================
+04_current_datetime.py
+Exit code: 0
+Tanggal lokal mesin: 2026-10-14
+Datetime lokal mesin: 2026-10-14T13:57:32.820884
+Datetime UTC: 2026-10-14T06:57:32.820839+00:00
+Datetime WIB: 2026-10-14T13:57:32.820839+07:00
+Tanggal WIB: 14/10/2026
+Catatan: waktu aktual berubah setiap program dijalankan.
+
+
+================================================================
+05_current_time.py
+Exit code: 0
+Jam lokal (datetime): 13:57:32
+Jam lokal (time): 13:57:32
+Jam UTC: 06:57:32
+Jam WIB: 13:57:32
+Objek time WIB: 13:57:32.882228+07:00
+Zona lokal mesin: ('SE Asia Standard Time', 'SE Asia Daylight Time')
+
+
+================================================================
+06_timestamp_datetime.py
+Exit code: 0
+Tanggal asal WIB: 2026-10-14T13:30:00+07:00
+Unix timestamp (detik): 1791959400.0
+Hasil UTC: 2026-10-14T06:30:00+00:00
+Hasil WIB: 2026-10-14T13:30:00+07:00
+Konversi bolak-balik sama: True
+Epoch UTC: 1970-01-01 00:00:00+00:00
+
+
+================================================================
+07_time_module.py
+Exit code: 0
+Timestamp aktual: 1791961053.0038037
+ctime lokal: Wed Oct 14 13:30:00 2026
+localtime: 2026-10-14 13:30:00
+gmtime UTC: 2026-10-14 06:30:00
+Tahun UTC: 2026 | Hari ke: 287
+asctime UTC: Wed Oct 14 06:30:00 2026
+mktime dari localtime: 1791959400.0
+strptime -> struct_time, tahun: 2026
+
+
+================================================================
+08_sleep.py
+Exit code: 0
+Mulai jeda 0.2 detik
+Durasi terukur: 0.232335 detik
+Nilai kembali sleep: None
+Jam digital WIB (3 tampilan, jeda 0.2 detik):
+1 13:57:33.317096
+2 13:57:33.554401
+3 13:57:33.780196
+Selesai
+
+RINGKASAN: 8/8 program berhasil.
